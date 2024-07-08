@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIg-Si-MKg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filmler-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="FilmlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5FZ-5I-wmW">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wUe-MI-Y2e">
+                                    <size key="itemSize" width="180" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filmlerHucre" id="YxL-aY-lUa" customClass="FilmlerHucre" customModule="FilmlerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2P6-p7-2or">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="django" translatesAutoresizingMaskIntoConstraints="NO" id="cVh-oR-Of7">
+                                                    <rect key="frame" x="-10" y="8" width="200" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="Nlh-aH-UuW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdH-EF-ckW">
+                                                    <rect key="frame" x="65.666666666666671" y="216" width="49" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-av-QVr">
+                                                    <rect key="frame" x="33" y="253" width="114" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
+                                                        <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="buttonSepeteEkle:" destination="YxL-aY-lUa" eventType="touchUpInside" id="Yz8-Md-pP8"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IdH-EF-ckW" firstAttribute="centerX" secondItem="2P6-p7-2or" secondAttribute="centerX" id="1eh-aN-QlW"/>
+                                                <constraint firstItem="cVh-oR-Of7" firstAttribute="top" secondItem="2P6-p7-2or" secondAttribute="top" constant="8" id="KUE-fa-pgn"/>
+                                                <constraint firstItem="cVh-oR-Of7" firstAttribute="centerX" secondItem="2P6-p7-2or" secondAttribute="centerX" id="cvA-8x-Sdb"/>
+                                                <constraint firstItem="HSe-av-QVr" firstAttribute="centerX" secondItem="2P6-p7-2or" secondAttribute="centerX" id="ebo-hY-CsH"/>
+                                                <constraint firstItem="HSe-av-QVr" firstAttribute="top" secondItem="IdH-EF-ckW" secondAttribute="bottom" constant="8" id="g5o-Lg-Yro"/>
+                                                <constraint firstItem="IdH-EF-ckW" firstAttribute="top" secondItem="cVh-oR-Of7" secondAttribute="bottom" constant="8" id="ilP-m7-8CA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewfilm" destination="cVh-oR-Of7" id="F8T-oE-S6Z"/>
+                                            <outlet property="labelFiyat" destination="IdH-EF-ckW" id="EOD-yO-6hU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5FZ-5I-wmW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D0i-fa-8x7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5FZ-5I-wmW" secondAttribute="trailing" id="lmE-0J-GOH"/>
+                            <constraint firstItem="5FZ-5I-wmW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nSv-wx-dmw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5FZ-5I-wmW" secondAttribute="bottom" id="zGv-eT-G7l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filmler" id="iIy-D8-AiD"/>
+                    <connections>
+                        <outlet property="filmlerCollectionView" destination="5FZ-5I-wmW" id="sCo-gc-Cfz"/>
+                        <segue destination="5um-Xd-7at" kind="show" identifier="toDetay" id="hEv-0P-EZc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+        </scene>
+        <!--Detay Sayfa-->
+        <scene sceneID="2sA-w9-kJk">
+            <objects>
+                <viewController id="5um-Xd-7at" customClass="DetaySayfa" customModule="FilmlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jFm-kW-WZD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Pianist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5i-jN-rpo">
+                                <rect key="frame" x="79" y="175" width="235" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thepianist" translatesAutoresizingMaskIntoConstraints="NO" id="GZ4-We-gnd">
+                                <rect key="frame" x="96.666666666666686" y="335" width="200" height="300"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-Vd-19M">
+                                <rect key="frame" x="156.33333333333334" y="735" width="80.333333333333343" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lft-VH-qcC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j5i-jN-rpo" firstAttribute="centerX" secondItem="jFm-kW-WZD" secondAttribute="centerX" id="Hbm-B8-w1i"/>
+                            <constraint firstItem="GZ4-We-gnd" firstAttribute="top" secondItem="j5i-jN-rpo" secondAttribute="bottom" constant="100" id="NgT-nu-Pe5"/>
+                            <constraint firstItem="XUo-Vd-19M" firstAttribute="top" secondItem="GZ4-We-gnd" secondAttribute="bottom" constant="100" id="f1g-Pg-f4R"/>
+                            <constraint firstItem="GZ4-We-gnd" firstAttribute="centerX" secondItem="jFm-kW-WZD" secondAttribute="centerX" id="rvv-Nu-gjU"/>
+                            <constraint firstItem="XUo-Vd-19M" firstAttribute="centerX" secondItem="jFm-kW-WZD" secondAttribute="centerX" id="vMB-rt-tFF"/>
+                            <constraint firstItem="j5i-jN-rpo" firstAttribute="top" secondItem="lft-VH-qcC" secondAttribute="top" constant="20" id="ytZ-hM-BhB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="o4w-tK-gjF"/>
+                    <connections>
+                        <outlet property="imageViewFilm" destination="GZ4-We-gnd" id="s2U-eB-hSA"/>
+                        <outlet property="labelFilm" destination="j5i-jN-rpo" id="Ayq-f4-HWW"/>
+                        <outlet property="labelFiyat" destination="XUo-Vd-19M" id="ilR-4E-Heu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYp-An-Ydx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.2442748091603" y="-35.211267605633807"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j8k-A8-bCh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gIg-Si-MKg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Kcj-ae-TNT">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l1h-99-8w0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vh-s8-qMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="django" width="200" height="300"/>
+        <image name="thepianist" width="200" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
